@@ -1,0 +1,159 @@
+.track-section {
+  background-color: #021713; // Keep the dark background for the section
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.track-title-container {
+  margin-top: 4em;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.track-section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 6.25em;
+  color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.15);
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.track-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4em;
+  color: #ffffff;
+  z-index: 2;
+  position: relative;
+  margin-top: 50px;
+}
+
+@media (max-width: 991px) {
+  .track-title-container {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .track-section-title {
+    font-size: 1.5em;
+    margin-top: 5px;
+  }
+  .track-title {
+    font-size: 1em;
+    margin-top: 1.3em;
+    text-wrap: nowrap;
+  }
+}
+
+.track-content {
+  // max-width: 1200px;
+  width: 100%;
+  padding: 1em 8em;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2em;
+
+  @media (max-width: 991px) {
+    padding: 1em 3em;
+  }
+
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  margin: 0 auto;
+}
+
+.track-card {
+  background-color: rgba(0, 255, 255, 0.05); // Light cyan background
+  // border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 2px solid #fff;
+  padding: 60px; /* Increased padding for larger cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 991px) {
+    border: none;
+
+  }
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at top left, rgba(0,255,255,0.1) 0%, rgba(0,255,255,0) 70%),
+      radial-gradient(circle at bottom right, rgba(0,255,255,0.1) 0%, rgba(0,255,255,0) 70%);
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  }
+}
+
+.track-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: 1em;
+}
+
+.track-card-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  text-wrap: nowrap;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .track-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .track-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Reduce gap between cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .track-grid {
+    // grid-template-columns: 1fr;
+    gap: 2em; /* Further reduce gap between cards */
+  }
+
+  .track-card {
+    padding: 30px; /* Further decrease padding for smaller cards */
+  }
+}

@@ -1,0 +1,177 @@
+.speaker-cards {
+  padding: 2rem;
+  background-color: #021713;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 5px auto;
+  padding: 1.5rem 2px;
+  
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+.event-card {
+  background: linear-gradient(99deg, #0d2826 2.01%, #2e8e87 97.99%);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.event-img-card {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  background: linear-gradient(99deg, #092522 2.01%, #228B80 97.99%);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.6em;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.event-speaker {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  margin-top: 1rem;
+}
+
+.event-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 1rem;
+  
+  opacity: 0.8;
+  position: relative;
+  transition: all 0.3s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.2;
+  max-width: 100%;
+
+  &.truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+@media (max-width: 768px) {
+  .event-title {
+    font-size: 14px;
+    max-width: 100%; // Ensure it doesn't overflow on mobile
+  }
+}
+
+
+.event-datetime {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 2rem;
+  opacity: 0.7;
+}
+
+.watch-button {
+  background-color: #021713;
+  color: #fff;
+  border: 1px solid #fbfbfb;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+  align-self: flex-start;
+
+  &:hover {
+    background-color: #042e26;
+    transform: scale(1.05); /* Slightly scales up the button */
+  }
+}
+
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: row;
+    align-items: center;
+    padding:0rem 0.5rem;
+    background: linear-gradient(to right, #0d2826, #2e8e87);
+  }
+
+  .event-img-card {
+    width: 100px;
+    height: 100px;
+    margin: 0 0.5em 0 0;
+  }
+
+  .event-details {
+    padding: 0 0.5rem;
+  }
+
+  .event-speaker {
+    font-size: 14px;
+    margin-bottom: 0.25rem;
+  }
+
+  .event-title {
+    font-size: 10px;
+    margin-bottom: 0.25rem;
+  }
+
+  .event-datetime {
+    font-size: 10px;
+    margin-bottom: 0.5rem;
+  }
+
+  .watch-button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

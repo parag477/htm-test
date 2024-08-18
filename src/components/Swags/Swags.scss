@@ -1,0 +1,561 @@
+
+.tab-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+  
+  }
+  
+  .tab-list li {
+    width: 100%;
+    text-align: center;
+    margin-right: 10px;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(100, 100, 100);
+  }
+  .tab-list li.active {
+   
+    cursor: pointer;
+    border-color:rgb(255, 255, 255);
+  }
+  
+  .tab-list li.active a {
+    font-weight: bold;
+    
+    
+  }
+  
+  .box-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        .box-container:nth-child(4) {
+          display: none;
+        }
+    }
+  }
+  
+  .box-container {
+    // border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .box {
+    background-color: #f2f2f2;
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .prizez-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #021713;
+    padding: 0 1.4em;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+    
+    .prize-title-container {
+      margin-top: 4em;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2em;
+    }
+    
+    .prize-title {
+      font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 3.7em;
+  color: #ffffff;
+  z-index: 2;
+  position: relative;
+  margin-top: 50px;
+  padding-top: 1.4rem;
+  margin-bottom: -2.5rem;
+    }
+    .prize-section-title {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 6.25em;
+      color: rgba(255, 255, 255, 0);
+      -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.15);
+      text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -58%);
+      z-index: 1;
+      white-space: nowrap;
+    }
+    @media (max-width: 991px) {
+      .prize-title-container {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+      .prize-section-title {
+        font-size: 2.5em;
+        margin-top: 1px;
+      }
+      .prize-title {
+        font-size: 1em;
+        margin-top: 1.3em;
+        text-wrap: nowrap;
+      }
+    }
+    
+    .champions-reward {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .swags-container {
+  
+      display: flex;
+      justify-content: space-evenly;
+      align-items: start;
+      padding-top: 3rem;
+      padding-bottom: 6rem;
+      flex-direction: row;
+      height: 100%;
+  
+  
+      .swags-card-image-container{
+        position: relative;
+        padding: 12px;
+        
+        
+        .swags-card-image {
+          position: relative;
+          width: 100% ;
+          .card-pic{
+           aspect-ratio: 12/16.2;
+            width: 100%;
+            max-width: 449px;
+          }
+          .swags-card-img2 {
+            position: relative;
+            height: 380px;
+            margin-left: 6em;
+            margin-top: 5.9em;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover; /* Ensures the image covers the area without stretching */
+            overflow: hidden; /* Ensures no part of the image goes outside the boundaries */
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 991px) {
+            .swags-card-img2 {
+                border: none;
+                margin-left: 2em; /* Adjust margin for smaller screens */
+                margin-top: 5em; /* Adjust margin for smaller screens */
+                height: auto; /* Allow the image height to adjust for smaller screens */
+            }
+        }
+        
+          .swags-card-para {
+            position: absolute;
+          left: 3em;
+          font-size: 32px;
+          color: #fff;
+          opacity: 90%;
+          top: 14em;
+          text-wrap: nowrap;
+          }
+          @media (max-width: 431px) {
+            top: 7em;
+          }  
+        }
+        @media (max-width: 431px) {
+          scale: 0.8;
+      
+        }  
+      }
+      @media (max-width: 991px) {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        // margin-top: -100px;
+         padding-top: 0rem;
+    
+      }  
+      @media (max-width: 431px) {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        margin-top: -100px;
+         padding-top: 0rem;
+    
+      }  
+      
+    }
+  
+    .swags-card {
+      height: 55vh;
+      width: 45vh;
+      background-color: rgba(0, 255, 255, 0.05); // Light cyan background
+      // border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      border: 2px solid #fff;
+      padding: 0 60px; /* Increased padding for larger cards */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      @media (max-width: 991px) {
+        border: none;
+    
+      }  
+      &:hover {
+        background-color: rgba(0, 255, 255, 0.1);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      }
+  
+      .swags-card-header {
+        display: flex;
+        justify-content: space-between;
+        max-height: 30vh;
+  
+        .swags-card-header-logo {
+          height: 5%;
+        }
+        .swags-card-header-mlh {
+          height: 15%;
+        }
+      }
+  
+      .swags-card-img {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        height: 45%;
+        margin-bottom: 1em;
+      }
+  
+      .swags-card-title {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        text-wrap: nowrap;
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+    }
+  
+  
+    .text-column {
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      line-height: normal;
+      width: 50%;
+      margin-top: 2.5em;
+      margin-left: 5em;
+  
+      .swags-description {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 1em;
+  
+        @media (max-width: 991px) {
+          font-size: 14px;
+          text-align: center;
+          margin-top: 2.5em;
+          // margin-bottom: 0.5em;
+        }
+      }
+  
+      .swags-content {
+        font-family: "Poppins", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 1em;
+  
+        ol {
+          margin-left: 1em;
+          list-style-position: inside;
+        }
+  
+        @media (max-width: 991px) {
+          font-size: 8px;
+          text-align: center;
+          margin-top: 2.5em;
+          margin-bottom: 0.5em;
+        }
+      }
+  
+      .swags-note {
+        font-family: "Poppins", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 1em;
+        margin-bottom: 1em;
+        opacity: 0.6;
+  
+        @media (max-width: 991px) {
+          font-size: 8px;
+          text-align: center;
+          margin-top: 2.5em;
+          margin-bottom: 0.5em;
+        }
+      }
+  
+      .swags-action {
+        display: flex;
+        text-align: center;
+        gap: 2.5em;
+        margin-top: 1.5em;
+        @media (max-width: 991px) {
+          gap: 1.5em;
+        }
+  
+        .swags-input {
+          font-family: "Poppins", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-size: 16px;
+          width: 100%;
+          max-width: 275px;
+          height: 45px;
+          padding: 12px;
+          border-radius: 5px;
+          background-color: transparent;
+          color: #fff;
+          border: 1.5px solid white;
+          outline: none;
+          transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+          box-shadow: 0px 0px 20px -18px;
+  
+          @media (max-width: 991px) {
+            width: 80%;
+            font-size: 10px;
+            
+          }
+  
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+          }
+  
+          &:hover {
+            border: 2px solid white;
+            box-shadow: 0px 0px 20px -17px;
+          }
+          &:active {
+            transform: scale(0.95);
+          }
+          &:focus {
+            border: 2px solid grey;
+          }
+          @media (max-width: 431px) {
+            max-width: 100%;
+          }
+        }
+  
+        .swags-btn {
+          font-family: "Poppins", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-size: 16px;
+          width: 30%;
+          outline: none;
+          cursor: pointer;
+          padding: 1.2%;
+          margin-bottom: 20px;
+          border-radius: 30px;
+          background-color: #fff;
+          border: 2px solid #aaa;
+          
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+          }
+  
+          @media (max-width: 431px) {
+            font-size: 14px;
+            padding: 2.2%;
+            width: 75%;
+          }
+        }
+        @media (max-width: 431px) {
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 991px) {
+        width: 100%;
+        padding: 0 3rem;
+        justify-content: start;
+      }
+      @media (max-width: 431px) {
+        width: 100%;
+        padding: 0 5.5rem;
+        justify-content: start;
+      }
+    }
+  
+    .swags-build {
+      font-family: "Poppins", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-size: 16px;
+      width: 25%;
+      outline: none;
+      padding: 1.2%;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      // border: 2px solid #aaa;
+      border: transparent;
+      // background-color: rgba(0, 255, 255, 0.05);
+      background: linear-gradient(#149087, #0F4945);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  
+      @media (max-width: 991px) {
+        width: 40%;
+        font-size: 14px;
+        padding: 2.2%;
+        border: none;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+          radial-gradient(circle at top left, rgba(0,255,255,0.1) 0%, rgba(0,255,255,0) 70%),
+          radial-gradient(circle at bottom right, rgba(0,255,255,0.1) 0%, rgba(0,255,255,0) 70%);
+        pointer-events: none;
+      }
+    
+      &:hover {
+        background-color: rgba(0, 255, 255, 0.1);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      }
+    }
+  
+  
+    button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none; }
+  
+  .tabs {
+    display: block;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    overflow: hidden; }
+    .tabs [class^="tab"] label,
+    .tabs [class*=" tab"] label {
+      color: #efedef;
+      cursor: pointer;
+      display: block;
+      font-size: 1.1em;
+      font-weight: 300;
+      line-height: 1em;
+      padding: 2rem 0;
+      text-align: center; }
+    .tabs [class^="tab"] [type="radio"],
+    .tabs [class*=" tab"] [type="radio"] {
+      border-bottom: 1px solid rgba(239, 237, 239, 0.5);
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      display: block;
+      width: 100%;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
+      .tabs [class*=" tab"] [type="radio"]:hover,
+      .tabs [class*=" tab"] [type="radio"]:focus {
+        border-bottom: 1px solid #fff; }
+      .tabs [class^="tab"] [type="radio"]:checked,
+      .tabs [class*=" tab"] [type="radio"]:checked {
+        width: 30%;
+        margin: auto;
+        border-bottom: 2px solid #fff; }
+      .tabs [class^="tab"] [type="radio"]:checked + div,
+      .tabs [class*=" tab"] [type="radio"]:checked + div {
+        opacity: 1; }
+      .tabs [class^="tab"] [type="radio"] + div,
+      .tabs [class*=" tab"] [type="radio"] + div {
+        display: block;
+        opacity: 0;
+        padding: 2rem 0;
+        width: 90%;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+    .tabs .tab-2 {
+      width: 33%; }
+      .tabs .tab-2 [type="radio"] + div {
+        width: 200%;
+        margin-left: 200%; }
+      .tabs .tab-2 [type="radio"]:checked + div {
+        margin-left: 0; }
+      .tabs .tab-2:last-child [type="radio"] + div {
+        margin-left: 100%; }
+      .tabs .tab-2:last-child [type="radio"]:checked + div {
+        margin-left: -100%; }
+  
+  
+  
+  
+  
+    @media (max-width: 991px) {
+        .text-column {
+          width: 110%;
+          margin-left: 0;
+        }
+    }
+  
+    @media (max-width: 480px) {  
+      .swags-card {
+        padding: 30px; /* Further decrease padding for smaller cards */
+      }
+    }
+    
+    @media (max-width: 991px) {
+      .prize-title-container {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+    
+      .prize-title {
+        font-size: 2em;
+        margin-top: 1.3em;
+      }
+    }

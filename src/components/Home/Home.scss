@@ -1,0 +1,181 @@
+.home-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh; // Adjust this value to control the height of the gradient
+  background: linear-gradient(to bottom, rgba(2, 23, 19, 0), rgba(2, 23, 19, 1));
+  z-index: 10;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 11;
+  position: relative;
+  margin-top: 15em;
+  @media (max-width: 768px) {
+    margin-top: 0em;
+  }
+}
+
+.hero-subtitle {
+  font-size: 30rem;
+  font-weight: 900;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    font-size: 11rem;
+    top: 40%;
+  }
+}
+
+.brightened {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-bottom: 0.9em;
+  color: white;
+  -webkit-mask-image: linear-gradient(to bottom, white 60%, transparent 70%);
+  mask-image: linear-gradient(to bottom, white 60%, transparent 70%);
+
+  @media (max-width: 768px) {
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+  }
+}
+
+.hero-title {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 5em;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.hero-description {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0 0 1em;
+  color: #000;
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    // flex-direction: column;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}
+
+.register-btn, .discord-btn {
+  padding: 0.5em 3em;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  @media (max-width: 768px) {
+    padding: 0.5em 1em;
+    font-size: 0.875em;
+    // margin-left: 8em;
+    // margin-right: 8em;
+  }
+}
+
+.register-btn {
+  background-color: #021713;
+  color: #fff;
+  border: 2px solid #021713;
+
+  &:hover {
+    background-color: #032e22;
+    border-color: #032e22;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.discord-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.transition-element {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #021713);
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.show-transition .transition-element {
+  transform: translateY(0);
+}

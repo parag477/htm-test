@@ -1,0 +1,43 @@
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 800;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-js #preloader,
+.oldie #preloader {
+  display: none;
+}
+
+#loader {
+  text-align: center;
+}
+
+.loader-logo {
+  width: 100px;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 768px) {
+  .loader-logo {
+    width: 200px;
+  }
+}

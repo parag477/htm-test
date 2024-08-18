@@ -1,0 +1,210 @@
+.venue-section {
+  background-color: #021713;
+  color: #fff;
+  padding: 2em 1.4em;
+}
+
+.sponsors-title-container {
+  position: relative;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.sponsors-section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 6.25em;
+  color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.15);
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  white-space: nowrap;
+  margin-top: -1rem;
+}
+
+.sponsors-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4em;
+  color: #ffffff;
+  position: relative;
+  margin-bottom: auto;
+}
+
+.venue-content {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  gap: 30px;
+  margin-bottom: 2rem;
+  margin-right: 10rem;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: -6.3rem;
+}
+
+.Marwadi-logo {
+  width: 370px;
+  margin-bottom: -15px;
+  background: transparent;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.university-text {
+  font-size: 1.4em;
+  color: #fff;
+}
+
+.vertical-divider {
+  width: 3px;
+  height: 160px;
+  background-color: #fff;
+}
+
+.naac-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.naac-title {
+  font-size: 2em;
+  font-weight: 1000;
+  margin-bottom: 9px;
+}
+
+.naac-logo {
+  height: 90px;
+}
+
+.get-directions-button {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 1em 3em;
+  margin-left: 0.8rem;
+  margin-bottom: -4rem;
+  color: #ffffff;
+  border: 0.5px solid #ffffff;
+  border-radius: 0.3em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #1d302c;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #021713;
+  }
+}
+
+@media (max-width: 768px) {
+  .venue-content {
+    height: 200px;
+    top: 1rem;
+  }
+
+  .sponsors-title {
+    top: 1rem;
+  }
+
+  .content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1px;
+    margin-left: 0;
+    margin-top: 3.6rem;
+    margin-bottom: 0rem;
+    margin-right: 0;
+  }
+
+  .logo-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1.6rem;
+    margin-right: 0;
+  }
+
+  .Marwadi-logo {
+    width: 128px;
+    opacity: 1;
+    margin-bottom: 0px;
+  }
+
+  .university-text {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .vertical-divider {
+    height: 70px;
+    margin-left: 0;
+    margin-bottom: 1.2rem;
+  }
+
+  .naac-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 3rem;
+    margin-bottom: 1.6rem;
+    margin-left: -1rem;
+  }
+
+  .naac-title {
+    font-size: 0.7em;
+    margin-bottom: 1px;
+  }
+
+  .naac-logo {
+    height: 46px;
+  }
+
+  .get-directions-button {
+    font-size: 8px;
+    padding: 0.5em 1.5em;
+    margin: 0;
+    margin-bottom: 4rem;
+  }
+}

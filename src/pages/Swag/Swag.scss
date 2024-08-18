@@ -1,0 +1,84 @@
+.swag-container {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  
+    .gradient-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30vh;
+      background: linear-gradient(to bottom, rgba(2, 23, 19, 0), rgba(2, 23, 19, 1));
+      z-index: 10;
+    }
+  }
+  
+  .swag-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+  
+    .whitish-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(194, 192, 192, 1) 0%, rgba(194, 192, 192, 0.7) 30%, rgba(194, 192, 192, 0.4) 40%, rgba(255, 255, 255, 0) 100%);
+      z-index: 1;
+    }
+  }
+  
+  .swag-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    object-position: top;
+    z-index: -1;
+  }
+  
+  .swag-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .swag-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 124px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+  
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+  
+  .swag-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+  
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+  

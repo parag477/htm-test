@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700');
+
+.footer-distributed {
+  background: #021713;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .footer-left {
+    width: 60%;
+    padding-right: 16em;
+  }
+
+  .footer-logo-image {
+    height: auto;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .footer-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 1vh;
+    margin-bottom: 20px;
+  }
+
+  .footer-icons {
+    margin-top: 20px;
+  
+    a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color: #33383b;
+      border-radius: 2px;
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 2em;
+      margin-right: 10px;
+      transition: transform 0.3s ease; /* Change transition property */
+
+      svg {
+        margin: auto;
+        margin-top: 5px;
+      }
+  
+      &:hover {
+        transform: scale(1.1); /* Scale up effect on hover */
+      }
+    }
+  }
+  
+  .footer-right {
+    width: 40%;
+    position: relative;
+   
+   
+
+  
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-image: url('background.webp');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 1;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background-color: rgba(2, 23, 19, 0.9);  // Adjust opacity as needed
+    }
+
+    .footer-center {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+
+      .footer-mid-text {
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 15px;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 10px;
+
+          a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+
+            &:hover {
+              color: #0ae9aa;;
+            }
+          }
+        }
+        .footer-btn {
+          display: inline-block;
+          padding: 10px 20px;
+          font-family: "Poppins", sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: #ffffff;
+          background-color: transparent;
+          border: 1px solid #ffffff;
+          border-radius: 4px;
+          text-decoration: none;
+          transition: all 0.3s ease;
+        
+          &:hover {
+            background-color: #ffffff;
+            color: #039e82;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.copyright {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 40px;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+
+    span {
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+
+  .copyright {
+    font-size: 12px;
+    margin-top: 0;
+  }
+
+
+  .footer-distributed {
+    padding: 30px 20px;
+    flex-direction: column;
+
+    .footer-left,
+    .footer-right {
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+      padding-right: 0;
+    }
+
+    .footer-left {
+      .footer-logo-image {
+        margin: 0 auto 20px;
+      }
+
+      .footer-text {
+        margin: 20px auto;
+      }
+
+      .footer-icons {
+        text-align: center;
+      }
+    }
+
+    .footer-right {
+      .footer-center {
+        .footer-links {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.body-hr {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(205, 214, 218, 0.25);
+  margin: 0 auto;
+}
